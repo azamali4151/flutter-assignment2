@@ -17,7 +17,7 @@ class Book{
     return discountedPrice;
   }
 }
-// Employee Class Start Here
+// Problem 2
 class Employee{
 
   String ? name;
@@ -44,7 +44,33 @@ class Developer  extends Employee{
     print('Developer Salary: ${salary}');
   }
 }
-//Employee Class End Here
+// Problem 3
+abstract class Appliance {
+  void turnOn();
+  void turnOff();
+}
+class Fan extends Appliance {
+  @override
+  void turnOn() {
+    print("Fan is now running.");
+  }
+
+  @override
+  void turnOff() {
+    print("Fan has been turned off.");
+  }
+}
+class Light extends Appliance {
+  @override
+  void turnOn() {
+    print("Light is switched on.");
+  }
+
+  @override
+  void turnOff() {
+    print("Light is switched off.");
+  }
+}
 void main(){
   print('========= Problem 1 ===========');
   print('\n');
@@ -66,5 +92,19 @@ void main(){
   print('\n');
   Developer neDeveloper = Developer('Md. Azam Ali',150000);
   neDeveloper.completeInformation('Dart');
+
+  print('\n');
+  print('========= Problem 3 ===========');
+
+  Fan fan = Fan();
+  Light light = Light();
+
+  fan.turnOn();
+  fan.turnOff();
+
+  print('\n');
+
+  light.turnOn();
+  light.turnOff();
 
 }
